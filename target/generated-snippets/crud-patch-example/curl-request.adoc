@@ -1,0 +1,8 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/crud/10' -i -X PATCH -H 'Content-Type: application/json' -d '{
+  "title" : "Sample Model",
+  "body" : "http://www.baeldung.com/",
+  "tags" : [ null ]
+}'
+----
