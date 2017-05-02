@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.ApiDocumentationIntegrationTest" time="0.651" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="com.example.ApiDocumentationIntegrationTest" time="0.374" tests="4" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="idea.version" value="2016.3.6"/>
+    <property name="idea.version" value="2017.1.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.121-b13"/>
@@ -14,7 +14,6 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7538"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -40,14 +39,13 @@
     <property name="user.timezone" value="Europe/Paris"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="idea.launcher.bin.path" value="/Applications/IntelliJ IDEA.app/Contents/bin"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="ANDRE"/>
     <property name="java.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.5.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=2016.3.6 package"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2017.1.2 package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -65,10 +63,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="crudGetExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.356"/>
-  <testcase name="crudDeleteExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.028"/>
-  <testcase name="crudPatchExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.029"/>
+  <testcase name="crudPatchExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.346"/>
   <testcase name="contextLoads" classname="com.example.ApiDocumentationIntegrationTest" time="0.005"/>
-  <testcase name="crudCreateExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.121"/>
-  <testcase name="crudPutExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.112"/>
+  <testcase name="crudCreateExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.013"/>
+  <testcase name="crudPutExample" classname="com.example.ApiDocumentationIntegrationTest" time="0.01"/>
 </testsuite>

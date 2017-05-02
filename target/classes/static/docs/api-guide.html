@@ -635,47 +635,20 @@ not create URIs themselves, instead they should use the above-described links to
 </div>
 <div class="sect3">
 <h4 id="_response_structure_2"><a class="link" href="#_response_structure_2">Response structure</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /crud HTTP/1.1
-Content-Type: application/json
-Host: localhost:8080
-Content-Length: 90
-
-{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-get-example/http-request.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_example_response_2"><a class="link" href="#_example_response_2">Example response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
-Content-Type: application/json;charset=UTF-8
-Content-Length: 94
-
-[ {
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-} ]</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-get-example/http-response.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_curl_request_2"><a class="link" href="#_curl_request_2">CURL request</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/crud' -i -H 'Content-Type: application/json' -d '{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}'</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-get-example/curl-request.adoc[]</p>
 </div>
 </div>
 </div>
@@ -686,39 +659,20 @@ Content-Length: 94
 </div>
 <div class="sect3">
 <h4 id="_response_structure_3"><a class="link" href="#_response_structure_3">Response structure</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /crud HTTP/1.1
-Content-Type: application/json
-Host: localhost:8080
-Content-Length: 90
-
-{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-create-example/http-request.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_example_response_3"><a class="link" href="#_example_response_3">Example response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 201 Created</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-create-example/http-response.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_curl_request_3"><a class="link" href="#_curl_request_3">CURL request</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/crud' -i -X POST -H 'Content-Type: application/json' -d '{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}'</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-create-example/curl-request.adoc[]</p>
 </div>
 </div>
 </div>
@@ -729,39 +683,20 @@ Content-Length: 90
 </div>
 <div class="sect3">
 <h4 id="_response_structure_4"><a class="link" href="#_response_structure_4">Response structure</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">DELETE /crud/10 HTTP/1.1
-Content-Type: application/json
-Host: localhost:8080
-Content-Length: 90
-
-{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-delete-example/http-request.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_example_response_4"><a class="link" href="#_example_response_4">Example response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-delete-example/http-response.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_curl_request_4"><a class="link" href="#_curl_request_4">CURL request</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/crud/10' -i -X DELETE -H 'Content-Type: application/json' -d '{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}'</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-delete-example/curl-request.adoc[]</p>
 </div>
 </div>
 </div>
@@ -772,39 +707,20 @@ Content-Length: 90
 </div>
 <div class="sect3">
 <h4 id="_response_structure_5"><a class="link" href="#_response_structure_5">Response structure</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">PATCH /crud/10 HTTP/1.1
-Content-Type: application/json
-Host: localhost:8080
-Content-Length: 90
-
-{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-patch-example/http-request.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_example_response_5"><a class="link" href="#_example_response_5">Example response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 204 No Content</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-patch-example/http-response.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_curl_request_5"><a class="link" href="#_curl_request_5">CURL request</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/crud/10' -i -X PATCH -H 'Content-Type: application/json' -d '{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}'</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-patch-example/curl-request.adoc[]</p>
 </div>
 </div>
 </div>
@@ -815,39 +731,20 @@ Content-Length: 90
 </div>
 <div class="sect3">
 <h4 id="_response_structure_6"><a class="link" href="#_response_structure_6">Response structure</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /crud/10 HTTP/1.1
-Content-Type: application/json
-Host: localhost:8080
-Content-Length: 90
-
-{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-put-example/http-request.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_example_response_6"><a class="link" href="#_example_response_6">Example response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 202 Accepted</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-put-example/http-response.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_curl_request_6"><a class="link" href="#_curl_request_6">CURL request</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/crud/10' -i -X PUT -H 'Content-Type: application/json' -d '{
-  "title" : "Sample Model",
-  "body" : "http://www.baeldung.com/",
-  "tags" : [ null ]
-}'</code></pre>
-</div>
+<div class="paragraph">
+<p>Unresolved directive in api-guide.adoc - include::/Users/ANDRE/Downloads/tutorials-master/spring-rest-docs/target/generated-snippets/crud-put-example/curl-request.adoc[]</p>
 </div>
 </div>
 </div>

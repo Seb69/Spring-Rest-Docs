@@ -8,9 +8,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.restdocs.RestDocumentation;
+import org.springframework.restdocs.JUnitRestDocumentation;
 import org.springframework.restdocs.constraints.ConstraintDescriptions;
-import org.springframework.restdocs.mockmvc.RestDocumentationResultHandler;
 import org.springframework.restdocs.payload.FieldDescriptor;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -21,12 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.util.Collections.singletonList;
-import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.*;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.*;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
-import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields;
 import static org.springframework.restdocs.snippet.Attributes.key;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.util.StringUtils.collectionToDelimitedString;
@@ -36,7 +32,7 @@ import static org.springframework.util.StringUtils.collectionToDelimitedString;
 public class ApiDocumentationIntegrationTest {
 
     @Rule
-    public final RestDocumentation restDocumentation = new RestDocumentation("target/generated-snippets");
+    public final JUnitRestDocumentation restDocumentation = new JUnitRestDocumentation("target/generated-snippets");
 
     @Autowired
     private WebApplicationContext context;
@@ -44,32 +40,13 @@ public class ApiDocumentationIntegrationTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    private RestDocumentationResultHandler document;
-
     private MockMvc mockMvc;
 
     @Before
     public void setUp() {
-        this.document = document("{method-name}", preprocessRequest(prettyPrint()), preprocessResponse(prettyPrint()));
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context).apply(documentationConfiguration(this.restDocumentation)).alwaysDo(this.document).build();
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context).apply(documentationConfiguration(this.restDocumentation)).build();
     }
 
-
-    @Test
-    public void crudGetExample() throws Exception {
-
-        Map<String, String> tag = new HashMap<>();
-        tag.put("name", "GET");
-
-        String tagLocation = this.mockMvc.perform(get("/crud").contentType(MediaType.APPLICATION_JSON_VALUE).content(this.objectMapper.writeValueAsString(tag))).andExpect(status().isOk()).andReturn().getResponse().getHeader("Location");
-
-        Map<String, Object> crud = new HashMap<>();
-        crud.put("title", "Sample Model");
-        crud.put("body", "http://www.baeldung.com/");
-        crud.put("tags", singletonList(tagLocation));
-
-        this.mockMvc.perform(get("/crud").contentType(MediaType.APPLICATION_JSON_VALUE).content(this.objectMapper.writeValueAsString(crud))).andExpect(status().isOk());
-    }
 
     @Test
     public void crudCreateExample() throws Exception {
@@ -83,26 +60,10 @@ public class ApiDocumentationIntegrationTest {
         crud.put("body", "http://www.baeldung.com/");
         crud.put("tags", singletonList(tagLocation));
 
-        ConstrainedFields fields = new ConstrainedFields(CrudInput.class);
-        this.document.snippets(requestFields(fields.withPath("title").description("The title of the note"), fields.withPath("body").description("The body of the note"), fields.withPath("tags").description("An array of tag resource URIs")));
-        this.mockMvc.perform(post("/crud").contentType(MediaType.APPLICATION_JSON_VALUE).content(this.objectMapper.writeValueAsString(crud))).andExpect(status().isCreated());
+        this.mockMvc.perform(post("/crud").contentType(MediaType.APPLICATION_JSON_VALUE)
+                .content(this.objectMapper.writeValueAsString(crud)))
+                .andExpect(status().isCreated());
 
-    }
-
-    @Test
-    public void crudDeleteExample() throws Exception {
-
-        Map<String, String> tag = new HashMap<>();
-        tag.put("name", "DELETE");
-
-        String tagLocation = this.mockMvc.perform(delete("/crud/10").contentType(MediaType.APPLICATION_JSON_VALUE).content(this.objectMapper.writeValueAsString(tag))).andExpect(status().isOk()).andReturn().getResponse().getHeader("Location");
-
-        Map<String, Object> crud = new HashMap<>();
-        crud.put("title", "Sample Model");
-        crud.put("body", "http://www.baeldung.com/");
-        crud.put("tags", singletonList(tagLocation));
-
-        this.mockMvc.perform(delete("/crud/10").contentType(MediaType.APPLICATION_JSON_VALUE).content(this.objectMapper.writeValueAsString(crud))).andExpect(status().isOk());
     }
 
     @Test
